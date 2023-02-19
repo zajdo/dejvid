@@ -1,94 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LoungeBar</title>
+	<title>Three Blocks Website</title>
+	<style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+		.container {
+			display: flex;
+			flex-direction: column;
+            height: 100%;
+		}
+		.block {
+            height: 100vh;
+            flex: 1;
+		}
+
+        #block1 {
+            background-color: #7dca9e;
+        }
+
+        #block2 {
+            background-color: #00605d;
+        }
+
+        #block3 {
+            background-color: #7dca9e;
+        }
+
+	</style>
 </head>
 <body>
- 
- <style>
-    html {
-        min-height: 100%;
-        position: relative;
-    }
-    body {
-        margin: 0;
-        height: 100%;
-        width: 100%;
-        background: #7dca9e;
-        font-family: 'JetBrains Mono', monospace;
-    }
-
-    .container{
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-    }
-
-    h1 {
-        padding-top: 5%;
-        font-size: 100px;
-    }
-
-
-    .jednotka{
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        text-align:center;
-        background-color: #7dca9e;
-        
-    }
-
-    .dvojka{
-        color: #350e08;
-        position: absolute;
-        top: 300px;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        text-align:center;
-        background-color: #00605d;
-    }
-
-    h3 {
-        font-size: 50px;
-    }
-
-    .trojka {
-        position: absolute;
-        top: 600px;
-        right: 0;
-        left: 0;
-        bottom: -100px;
-        text-align:center;
-        background-color: #7dca9e;
-    }
-
- </style>
- <div class="container">
- <div class="jednotka">
- <h1 align = center, style="color:#00605d">lounge<span style="color:#350e08">bar</span></h1>
- </div>
-<div class="dvojka">
-    <h3>About</h3>
-</div>
-<div class="trojka">
-    <h3>Pricing</h3>
-
- 
- <p>Hi, my name is Dávid Zachar and this is my personal website.<br>
-    In this moment this is just for my experiments with learning html and css and using custom domains. 
- </p>
- </div>
- </div>
-
+	<div class="container">
+		<div class="block" id="block1"></div>
+		<div class="block" id="block2"></div>
+		<div class="block" id="block3"></div>
+	</div>
 </body>
 </html>
-
