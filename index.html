@@ -3,42 +3,98 @@
 <head>
 	<title>Three Blocks Website</title>
 	<style>
-        html, body {
-            height: 100%;
-            margin: 0;
+        * {
             padding: 0;
+            margin: 0;
+            box-sizing: border-box;
         }
-		.container {
-			display: flex;
-			flex-direction: column;
-            height: 300vh;
-            overflow: hidden;
-		}
-		.block {
-            height: 100vh;
-            width: 100vw;
-            flex: 1;
-		}
-
-        #block1 {
-            background-color: #7dca9e;
+        html {
+            font-size: 40px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            scroll-behavior: smooth;
         }
-
-        #block2 {
+        section {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #sec-1 {
+            background-color:#7dca9e;
+        }
+        #sec-2 {
             background-color: #00605d;
         }
-
-        #block3 {
+        #sec-3 {
             background-color: #7dca9e;
+        }
+        .scroll-down {
+            height: 50px;
+            width: 30px;
+            border: 2px solid black;
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        .scroll-down::before,
+        .scroll-down::after {
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            height: 10px;
+            width: 10px;
+            transform: translate(-50%, -100%) rotate(45deg);
+            border: 3px solid black;
+            border-top: transparent;
+            border-left: transparent;
+            animation: scroll-down 1s ease-in-out infinite;
+        }
+        .scroll-down::before {
+            top: 30%;
+            animation-delay: 0.3s;
+            /* animation: scroll-down 1s ease-in-out infinite; */
+        }
+
+        @keyframes scroll-down {
+            0% {
+                /* top:20%; */
+                opacity: 0;
+            }
+            30% {
+                opacity: 1;
+            }
+            60% {
+                opacity: 1;
+            }
+            100% {
+                top: 90%;
+                opacity: 0;}
         }
 
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="block" id="block1"></div>
-		<div class="block" id="block2"></div>
-		<div class="block" id="block3"></div>
-	</div>
+	<section id="sec-1">
+        <div class="container">
+          <h1>Hello World</h1>
+          <a href="#sec-2">
+            <div class="scroll-down"></div>
+          </a>
+        </div>
+      </section>
+      <section id="sec-2">
+        <div class="container">
+          <h1>This is Sec 2</h1>
+        </div>
+      </section>
+      <section id="sec-3">
+        <div class="container">
+            <h1>Section 3</h1>
+        </div>
+      </section>
 </body>
 </html>
