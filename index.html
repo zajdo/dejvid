@@ -2,6 +2,12 @@
 <html>
 <head>
 	<title>dzachi.sk</title>
+    <script>
+        function scrollToSection(event, sectionId) {
+          event.preventDefault(); // prevent the default behavior of the link
+          document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" }); // scroll to the section
+        }
+    </script>
 	<style>
         * {
             padding: 0;
@@ -112,9 +118,9 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#sec-1">Home</a></li>
-            <li><a href="#sec-2">Section 2</a></li>
-            <li><a href="#sec-3">Section 3</a></li>
+            <li><a href="#sec-1" onclick="scrollToSection(event, 'sec-1')">Home</a></li>
+            <li><a href="#sec-2" onclick="scrollToSection(event, 'sec-2')">Section 2</a></li>
+            <li><a href="#sec-3" onclick="scrollToSection(event, 'sec-3')">Section 3</a></li>
         </ul>
     </nav>
 	<section id="sec-1">
