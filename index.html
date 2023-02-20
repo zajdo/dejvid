@@ -109,8 +109,13 @@
             text-align: center;
         }
 
-        li:hover a, li:active a {
+        /*li:hover a, li:active a {
             color: #350e08;
+        }*/
+
+        @media (hover: hover) {
+            li:hover a {
+                color: #350e08;} /* solves sticky problem */
         }
 
 	</style>
