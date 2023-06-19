@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 40px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+    color: #350e08;
+}
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#sec-1 {
+    background-color:#7dca9e;
+}
+#sec-2 {
+    background-color: #00605d;
+}
+#sec-3 {
+    background-color: #7dca9e;
+}
+
+#sec-1 h1 {
+    /*padding-top: 150px;*/
+    align-items: center;
+    justify-content: center;
+}
+.scroll-down {
+    height: 50px;
+    width: 30px;
+    border: 2px solid #350e08;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.scroll-down::before,
+.scroll-down::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border: 3px solid #350e08;
+    border-top: transparent;
+    border-left: transparent;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+.scroll-down::before {
+    top: 30%;
+    animation-delay: 0.3s;
+    /* animation: scroll-down 1s ease-in-out infinite; */
+}
+
+@keyframes scroll-down {
+    0% {
+        /* top:20%; */
+        opacity: 0;
+    }
+    30% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        top: 90%;
+        opacity: 0;}
+}
+
+ul {
+    background-color: #13433f;
+    width: 100%;
+    /*border-radius: 4px;*/
+    list-style: none;
+    display: flex;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    position: fixed;
+    top: 0;
+    overflow: auto;
+    box-shadow: -2px 2px 17px 0px #13433f;
+} 
+
+
+li a {
+    display: inline-block;
+    padding: 12px;
+    text-decoration: none;
+    color: #70b58e ;
+    text-align: center;
+}
+
+li:active a {
+    color: #ffb668;
+}
+
+@media (hover: hover) {
+    li:hover a {
+        color: #ffb668;} /* solves sticky problem */
+}
+
+div.gallery {
+border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+border: 1px solid #777;
+}
+
+div.gallery img {
+width: 100%;
+height: auto;
+}
+
+div.desc {
+padding: 15px;
+text-align: center;
+}
+
+* {
+box-sizing: border-box;
+}
+
+.responsive {
+padding: 0 6px;
+float: left;
+width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+.responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.responsive {
+    width: 100%;
+}
+}
+
+.clearfix:after {
+content: "";
+display: table;
+clear: both;
+}
