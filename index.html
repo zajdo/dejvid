@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>dzachi.sk</title>
-    <script>
-        function scrollToSection(event, sectionId) {
-          event.preventDefault(); // prevent the default behavior of the link
-          document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" }); // scroll to the section
-        }
-    </script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-	
 
+<head>
+    <title>dzachi.sk</title>
+    <script src="path/to/your/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body ontouchstart="">
-   <!-- <nav>
+    <!-- <nav>
         <ul>
             <li><a href="#sec-1" onclick="scrollToSection(event, 'sec-1')">Home</a></li>
             <li><a href="#sec-2" onclick="scrollToSection(event, 'sec-2')">My duplicates</a></li>
             <li><a href="#sec-3" onclick="scrollToSection(event, 'sec-3')">Coins I am looking for</a></li>
         </ul>
     </nav>-->
-	<section id="sec-1">
+    <section id="sec-1">
         <div class="container">
             <h1>Hello World!</h1>
             <!--
@@ -41,20 +36,21 @@
                 </div>
               </div>-->
 
-          <a href="#sec-2">
-            <div class="scroll-down"></div>
-          </a>
+            <a href="#sec-2">
+                <div class="scroll-down"></div>
+            </a>
         </div>
-      </section>
-      <section id="sec-2">
+    </section>
+    <section id="sec-2">
         <div class="container">
-          <h1>This is Sec 2</h1>
+            <h1>This is Sec 2</h1>
         </div>
-      </section>
-      <section id="sec-3">
+    </section>
+    <section id="sec-3">
         <div class="container">
             <h1>Section 3</h1>
         </div>
-      </section>
+    </section>
 </body>
+
 </html>
